@@ -198,42 +198,72 @@ class app(object):
             f.close()
 
     def deleteAccount1(self):
-        with open('Accounts.json', 'r+') as k:
-            data = json.load(k)
-            data['Save1']['Used'] = False
-        k.close()
+        jsonFile = open("Accounts.json", "r")  # Open the JSON file for reading
+        data = json.load(jsonFile)  # Read the JSON into the buffer
+        jsonFile.close()  # Close the JSON file
+
+        data['Save1']['Used'] = False
+
+        jsonFile = open("Accounts.json", "w+")  # <------ Saves Changes
+        jsonFile.write(json.dumps(data))        # ^
+        jsonFile.close()
+
         self.guilabel1.config(text="Used: False")
         self.button1.config(text="null")
 
     def deleteAccount2(self):
-        with open('Accounts.json', 'r+') as k:
-            data = json.load(k)
-            data['Save2']['Used'] = False
-        k.close()
+        jsonFile = open("Accounts.json", "r")  # Open the JSON file for reading
+        data = json.load(jsonFile)  # Read the JSON into the buffer
+        jsonFile.close()  # Close the JSON file
+
+        data['Save2']['Used'] = False
+
+        jsonFile = open("Accounts.json", "w+")  # <------ Saves Changes
+        jsonFile.write(json.dumps(data))  # ^
+        jsonFile.close()
+
         self.guilabel2.config(text="Used: False")
         self.button2.config(text="null")
 
     def deleteAccount3(self):
-        with open('Accounts.json', 'r+') as k:
-            data = json.load(k)
-            data['Save3']['Used'] = False
-        k.close()
+        jsonFile = open("Accounts.json", "r")  # Open the JSON file for reading
+        data = json.load(jsonFile)  # Read the JSON into the buffer
+        jsonFile.close()  # Close the JSON file
+
+        data['Save3']['Used'] = False
+
+        jsonFile = open("Accounts.json", "w+")  # <------ Saves Changes
+        jsonFile.write(json.dumps(data))  # ^
+        jsonFile.close()
+
         self.guilabel3.config(text="Used: False")
         self.button3.config(text="null")
 
     def deleteAccount4(self):
-        with open('Accounts.json', 'r+') as k:
-            data = json.load(k)
-            data['Save4']['Used'] = False
-        k.close()
+        jsonFile = open("Accounts.json", "r")  # Open the JSON file for reading
+        data = json.load(jsonFile)  # Read the JSON into the buffer
+        jsonFile.close()  # Close the JSON file
+
+        data['Save4']['Used'] = False
+
+        jsonFile = open("Accounts.json", "w+")  # <------ Saves Changes
+        jsonFile.write(json.dumps(data))  # ^
+        jsonFile.close()
+
         self.guilabel4.config(text="Used: False")
         self.button4.config(text="null")
 
     def deleteAccount5(self):
-        with open('Accounts.json', 'r+') as k:
-            data = json.load(k)
-            data['Save5']['Used'] = False
-        k.close()
+        jsonFile = open("Accounts.json", "r")  # Open the JSON file for reading
+        data = json.load(jsonFile)  # Read the JSON into the buffer
+        jsonFile.close()  # Close the JSON file
+
+        data['Save5']['Used'] = False
+
+        jsonFile = open("Accounts.json", "w+")  # <------ Saves Changes
+        jsonFile.write(json.dumps(data))  # ^
+        jsonFile.close()
+
         self.guilabel5.config(text="Used: False")
         self.button5.config(text="null")
 
